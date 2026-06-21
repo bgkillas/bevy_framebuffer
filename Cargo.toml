@@ -12,12 +12,12 @@ categories = ["game-development", "rendering", "graphics"]
 exclude = ["examples"]
 
 [dependencies.bevy]
-version = "0.18"
+version = "0.19.0"
 default-features = false
 optional = true
 
 [dependencies.pixels]
-version =  "0.15"
+version = "0.17.1"
 optional = true
 
 [dependencies.softbuffer]
@@ -25,10 +25,10 @@ version =  "0.4"
 optional = true
 
 [dev-dependencies]
-bevy = { version = "0.18", default-features = false, features = [ "wayland", "debug" ] }
+bevy = { version = "0.19.0", default-features = false, features = [ "wayland", "debug" ] }
 
 [features]
-default = ["dep:bevy", "schedule"]
+default = ["dep:bevy", "schedule", "pixels", "softbuffer"]
 pixels = ["dep:pixels", "bevy/bevy_window", "bevy/bevy_winit"]
 softbuffer = ["dep:softbuffer", "bevy/bevy_window", "bevy/bevy_winit"]
 schedule = []
